@@ -1,3 +1,38 @@
+init-system-helpers (1.69~deb13u1) trixie; urgency=medium
+
+  * Upload to trixie
+
+ -- Luca Boccassi <bluca@debian.org>  Wed, 20 Aug 2025 14:39:01 +0100
+
+init-system-helpers (1.69) unstable; urgency=medium
+
+  * Add postinst to hotfix an upgrade bug on certain newly live-installed
+    systems built using Trixie's live-build (Closes: #1111039)
+
+ -- Luca Boccassi <bluca@debian.org>  Fri, 15 Aug 2025 19:46:44 +0100
+
+init-system-helpers (1.68) unstable; urgency=medium
+
+  * Drop no longer needed dependency on usrmerge | usr-is-merged.
+    This was meant as a temporary measure to ensure that the transition to
+    the merged-/usr file system layout is done on upgrades to bookworm.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 29 Dec 2024 14:52:41 +0100
+
+init-system-helpers (1.67) unstable; urgency=medium
+
+  [ Mark Hindley ]
+  * Don't manually set status symlinks for native openrc-run scripts. For
+    native openrc-run scripts, fiddling with the links before the script
+    is run actually prevents it from running as openrc-run detects the
+    status has been changed and considers the script as already started.
+    (Closes: #1081994)
+
+  [ Luca Boccassi ]
+  * d/control: bump Standards-Version to 4.7.0, no changes
+
+ -- Luca Boccassi <bluca@debian.org>  Tue, 17 Sep 2024 17:07:33 +0200
+
 init-system-helpers (1.66) unstable; urgency=medium
 
   [ Samuel Thibault ]
